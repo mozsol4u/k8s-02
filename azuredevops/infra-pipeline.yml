@@ -9,7 +9,7 @@ pool:
 variables:
   scriptPath: 'infra/azcli/script.sh'
   artifactName: 'deployment-scripts'
-  serviceConnection: 'arm-svc-con' 
+  serviceConnection: 'aro-sp-connection' 
   environment: 'dev'
 
 stages:

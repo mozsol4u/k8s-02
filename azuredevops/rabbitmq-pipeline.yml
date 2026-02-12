@@ -4,10 +4,10 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  serviceConnection: 'arm-svc-con'
-  aksCluster: 'aks-onlinestore-dev-uksouth-001'
-  aksResourceGroup: 'rg-onlinestore-dev-uksouth-001'
-  acrName: 'acronlinestoredevuksouth001'
+  serviceConnection: 'aro-sp-connection'
+  aksCluster: 'aks-onlinestore-dev-cac-001'
+  aksResourceGroup: 'rg-onlinestore-dev-cac-001'
+  acrName: 'acronlinestoredevcac001'
   namespace: 'default'
   environment: "dev"
   artifactName: 'manifests'

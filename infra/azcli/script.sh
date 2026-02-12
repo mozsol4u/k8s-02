@@ -1,8 +1,8 @@
 # Customize these values
-RESOURCE_GROUP="rg-onlinestore-dev-uksouth-001"
-LOCATION="uksouth"
-AKS_NAME="aks-onlinestore-dev-uksouth-001"
-ACR_NAME="acronlinestoredevuksouth001"
+RESOURCE_GROUP="rg-onlinestore-dev-cac-001"
+LOCATION="canadacentral"
+AKS_NAME="aks-onlinestore-dev-cac-001"
+ACR_NAME="acronlinestoredevcac001"
 NODE_COUNT=1
 
 # Create a resource group
