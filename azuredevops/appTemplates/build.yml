@@ -1,5 +1,7 @@
 parameters:
-- name: "acrServiceConnection"
+- name: "serviceConnection"
+  type: string
+- name: "acrName"
   type: string
 - name: "imageName"
   type: string
@@ -9,12 +11,16 @@ parameters:
   type: string
 
 steps:      
-  - task: Docker@2
+  - task: AzureCLI@2
     displayName: Build and publish ${{parameters.imageName}} to ACR
     inputs:
-      command: buildAndPush
-      containerRegistry: ${{parameters.acrServiceConnection}}
-      repository: ${{parameters.imageName}}
-      Dockerfile: ${{parameters.dockerFilePath}}
-      tags: |
-        ${{parameters.tag}}
+      azureSubscription: ${{parameters.serviceConnection}}
+      scriptType: bash
+      scriptLocation: inlineScript
+      inlineScript: |
+        echo "Building and pushing image: ${{parameters.imageName}}:${{parameters.tag}}"
+        az acr build \
+          --registry ${{parameters.acrName}} \
+          --image ${{parameters.imageName}}:${{parameters.tag}} \
+          --file ${{parameters.dockerFilePath}} \
+          .

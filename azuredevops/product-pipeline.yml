@@ -10,7 +10,6 @@ variables:
   serviceConnection: 'aro-sp-connection'
   aksCluster: 'aks-onlinestore-dev-cac-001'
   aksResourceGroup: 'rg-onlinestore-dev-cac-001'
-  acrServiceConnection: 'aro-sp-connection'
   acrName: 'acronlinestoredevcac001'
   namespace: 'default'
   environment: "dev"
@@ -32,7 +31,8 @@ stages:
 
           - template: appTemplates/build.yml
             parameters:
-              acrServiceConnection: $(acrServiceConnection)
+              serviceConnection: $(serviceConnection)
+              acrName: $(acrName)
               imageName: $(imageName)
               dockerFilePath: '$(Build.sourcesdirectory)/app/product-service/Dockerfile'
               tag: $(imageTag)
