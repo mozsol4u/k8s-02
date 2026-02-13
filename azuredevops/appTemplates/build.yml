@@ -1,5 +1,5 @@
 parameters:
-- name: "aro-sp-connection"
+- name: "acrServiceConnection"
   type: string
 - name: "imageName"
   type: string
