@@ -10,7 +10,7 @@ variables:
   serviceConnection: 'aro-sp-connection'
   aksCluster: 'aks-onlinestore-dev-cac-001'
   aksResourceGroup: 'rg-onlinestore-dev-cac-001'
-  acrServiceConnection: 'sp-acr-onlinestore-dev'
+  acrServiceConnection: 'aro-sp-connection'
   aksServiceConnection: 'aro-sp-connection'
   acrName: 'acronlinestoredevcac001'
   namespace: 'default'
