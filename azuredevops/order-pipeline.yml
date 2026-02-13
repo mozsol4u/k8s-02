@@ -34,10 +34,10 @@ stages:
 
           - template: appTemplates/build.yml
             parameters:
-              acrServiceConnection: acrServiceConnection
-              imageName: imageName
+              acrServiceConnection: $(acrServiceConnection)
+              imageName: $(imageName)
               dockerFilePath: '$(Build.sourcesdirectory)/app/order-service/Dockerfile'
-              tag: imageTag
+              tag: $(imageTag)
 
           - task: PublishPipelineArtifact@1
             displayName: Publish Manifest
