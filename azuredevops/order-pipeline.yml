@@ -12,7 +12,7 @@ variables:
   aksResourceGroup: 'rg-onlinestore-dev-cac-001'
   acrServiceConnection: 'aro-sp-connection'
   aksServiceConnection: 'aro-sp-connection'
-  acrName: 'aro-sp-connection'
+  acrName: 'acronlinestoredevcac001'
   namespace: 'default'
   environment: "dev"
   artifactName: 'manifests'
