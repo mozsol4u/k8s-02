@@ -95,8 +95,8 @@
         az account set --subscription=<subscriptionId>
         az account show
 
-        RESOURCE_GROUP="rg-onlinestore-dev-uksouth-001"
-        AKS_NAME="aks-onlinestore-dev-uksouth-001"
+        RESOURCE_GROUP="rg-onlinestore-dev-cac-001"
+        AKS_NAME="aks-onlinestore-dev-cac-001"
 
         az aks get-credentials --resource-group $RESOURCE_GROUP --name $AKS_NAME
 
