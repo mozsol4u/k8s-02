@@ -19,8 +19,10 @@ steps:
       scriptLocation: inlineScript
       inlineScript: |
         echo "Building and pushing image: ${{parameters.imageName}}:${{parameters.tag}}"
+        CONTEXT_DIR=$(dirname "${{parameters.dockerFilePath}}")
+        echo "Build context: $CONTEXT_DIR"
         az acr build \
           --registry ${{parameters.acrName}} \
           --image ${{parameters.imageName}}:${{parameters.tag}} \
-          --file ${{parameters.dockerFilePath}} \
-          .
+          --file "$CONTEXT_DIR/Dockerfile" \
+          "$CONTEXT_DIR"
