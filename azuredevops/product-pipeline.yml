@@ -7,10 +7,10 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  serviceConnection: 'arm-svc-con'
+  serviceConnection: 'aro-sp-connection'
   aksCluster: 'aks-onlinestore-dev-cac-001'
   aksResourceGroup: 'rg-onlinestore-dev-cac-001'
-  acrServiceConnection: 'acr-svc-connection'
+  acrServiceConnection: 'aro-sp-connection'
   acrName: 'acronlinestoredevcac001'
   namespace: 'default'
   environment: "dev"
